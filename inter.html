@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<style>
+    table,th,td
+    {
+     border:3px solid whitesmoke;
+    }
+    
+    th,td{
+        padding: 6px;
+    }
+    body {background-color: pink;}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Interior Design</h1>
+    <button type="button" onclick="loadXML()">SHOW LIST</button>
+    <br><br>
+    <table id="demo"></table>
+    <script>
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","inte.xml",true);
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>NAME</th><th>Price</th></tr>";
+            var x=xmlDoc.getElementsByTagName("travel");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +
+                "</td></tr>" +
+                 x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+                "</td></tr>" +
+                 x[i].getElementsByTagName("categories")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+    </script>
+</body>
+</html>

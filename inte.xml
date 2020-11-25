@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interior Design>
+<interior>
+    <name>Modern</name>
+    <price>50000</price>
+    <description>Modern design employs a sense of simplicity in every element, including furniture</description>
+    <categories>36</categories>
+</interior>
+<interior>
+    <name>Contemporary</name>
+    <price>60000</price>
+    <description>Modern and contemporary are two styles frequently used interchangeably</description>
+    <categories>8</categories>
+</interior>
+<interior>
+    <name>Traditional</name>
+    <price>45000</price>
+    <description>Traditional design style offers classic details, sumptuous furnishings, and an abundance of accessorie</description>
+    <categories>14</categories>
+</interior>
+<interior>
+    <name>Industrial</name>
+    <price>70000</price>
+    <description>Industrial style as the name implies, draws inspiration from a warehouse or an urban loft</description>
+    <categories>4</categories>
+</interior>
+<interior>
+    <name>Transitional</name>
+    <price>80000</price>
+    <description>Transitional is a very popular style because it borrows from both traditional and modern design</description>
+    <categories>4</categories>
+</interior>
+<Interior Design>>
+</webpagedevelop>
+
